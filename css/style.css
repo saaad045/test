@@ -279,11 +279,16 @@
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           padding: 2rem;
           font-weight: 700;
-          color: white;
-          text-align: center;
+          color: #fff;
+          text-align: left; /* Left align text */
+          min-height: 500px;
+          background: linear-gradient(
+            120deg,
+            rgba(3, 74, 177, 0.85) 0%,
+          );
         }
 
         .hero-img {
@@ -293,8 +298,21 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          z-index: -2;
+          opacity: 0.7;
+          /* Slightly dim the image for better text visibility */
+        }
+
+        .hero::before {
+          content: "";
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: linear-gradient(
+            120deg,
+            rgba(3, 74, 177, 0.85) 0%,
+            rgba(3, 74, 177, 0.7) 100%
+          );
           z-index: -1;
-          opacity: 0.9;
         }
 
         .btn-hero {
@@ -308,28 +326,50 @@
           font-weight: 500;
           text-decoration: none;
           transition: background 0.3s ease, color 0.3s ease;
+          text-align: left; /* Left align button text */
         }
 
         .btn-hero:hover {
           background-color: var(--primary-color);
-          color: white
+          color: #fff;
         }
-
 
         .hero-content {
           flex: 1 1 50%;
           z-index: 1;
           padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start; /* Left align all content */
         }
 
-        .hero-content h1 {
-          font-size: 3.5rem;
+        .hero-content h1,
+        .hero-content h2,
+        .hero-content h3 {
+          color: #fff;
+          text-align: left;
           margin-bottom: 1rem;
         }
 
         .hero-content p {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
+          font-weight: 400;
           margin-bottom: 1.5rem;
+          color: #e3e9f6; /* Lighter color for contrast */
+          text-align: left;
+          max-width: 600px;
+        }
+
+        @media (max-width: 768px) {
+          .hero {
+            flex-direction: column;
+            padding: 1.5rem;
+            min-height: 350px;
+          }
+          .hero-content {
+            padding: 1rem;
+            align-items: flex-start;
+          }
         }
 
        .contact-form-wrapper {
