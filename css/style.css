@@ -315,32 +315,31 @@
           z-index: -1;
         }
 
-        .btn-hero {
-          display: inline-block;
-          padding: 0.75rem 2rem;
-          border: 2px solid var(--secondary-color);
-          border-radius: 6px;
-          background-color: var(--secondary-color);
-          color: white;
-          font-size: 1rem;
-          font-weight: 500;
-          text-decoration: none;
-          transition: background 0.3s ease, color 0.3s ease;
-          text-align: left; /* Left align button text */
-        }
+         .btn-hero {
+              display: inline-block;
+              padding: 0.75rem 2rem;
+              border: 2px solid var(--secondary-color);
+              border-radius: 30px; /* Match other rounded buttons */
+              background-color: var(--secondary-color);
+              color: white;
+              font-size: 1rem;
+              font-weight: 500;
+              text-decoration: none;
+              transition: background 0.3s ease, color 0.3s ease;
+              text-align: left; /* Left align button text */
+            }
 
-        .btn-hero:hover {
-          background-color: var(--primary-color);
-          color: #fff;
-        }
-
+            .btn-hero:hover {
+              background-color: var(--primary-color);
+              color: #fff;
+            }
         .hero-content {
           flex: 1 1 50%;
           z-index: 1;
           padding: 2rem;
           display: flex;
           flex-direction: column;
-          align-items: flex-start; /* Left align all content */
+          align-items: flex-start; 
         }
 
         .hero-content h1,
@@ -355,7 +354,7 @@
           font-size: 1.1rem;
           font-weight: 400;
           margin-bottom: 1.5rem;
-          color: #e3e9f6; /* Lighter color for contrast */
+          color: #e3e9f6; 
           text-align: left;
           max-width: 600px;
         }
