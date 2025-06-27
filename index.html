@@ -118,12 +118,19 @@
     </button>
 
     <!-- Hero Section -->
-    <section class="hero">
+ <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-background">
         <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
             alt="Hero Image" class="hero-img img-fluid" />
-        <div class="hero-content">
-            <h3 class="hero-title">A Medical Billing Company in USA Streamlines Your Practice</h3>
-                   <p>At SHMEDEX, we provide accurate and smooth medical billing services for healthcare providers to
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Hero Content (Left Side) -->
+            <div class="col-lg-7">
+                <div class="hero-content">
+                    <h3 class="hero-title">A Medical Billing Company in USA Streamlines Your Practice</h3>
+                    <p>At SHMEDEX, we provide accurate and smooth medical billing services for healthcare providers to 
                         be paid on time. Our professional team handles all procedures in the billing process, including
                         correct patient information and applying the appropriate medical codes to submitting claims and
                         reviewing payments.</p>
@@ -131,22 +138,27 @@
                     <p>With SHMEDEX, you don't have to stress about billing – we take care of it all. Whether you run a
                         solo practice or a large healthcare group, we offer custom solutions that fit your needs and
                         help your practice grow.</p>
-            <a href="#stats" class="btn btn-hero" id="scrollBtn">Get Started</a>
+                    <a href="#stats" class="btn btn-hero" id="scrollBtn">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Contact Form (Right Side) -->
+            <div class="col-lg-5">
+                <div class="contact-form-wrapper">
+                    <h2>Get A Free Audit Of Your Practice</h2>
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                        <input type="hidden" name="access_key" value="cde69bb1-5fc0-4bd7-bf08-703a4951c654">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="tel" name="phone" placeholder="Phone" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
-        <!-- Contact Form Overlay -->
-        <div class="contact-form-wrapper">
-            <h2>Get A Free Audit Of Your Practice</h2>
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                <!-- Web3Forms Access Key -->
-                <input type="hidden" name="access_key" value="cde69bb1-5fc0-4bd7-bf08-703a4951c654">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="tel" name="phone" placeholder="Phone" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
 
     <!-- Stats Section 
     <section class="stats" id="stats">
